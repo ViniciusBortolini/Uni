@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baixando Aplicativo...</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f4f4f9;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>O seu download está começando!</h1>
+        <p>Se o download não iniciar automaticamente em alguns segundos, clique no botão abaixo:</p>
+        <!-- Substitua 'app-release.apk' pelo nome exato do seu arquivo -->
+        <a id="download-link" href="app-release.apk" download class="btn">Clique aqui para baixar</a>
+    </div>
+
+    <script>
+        // Executa a função assim que a página é totalmente carregada
+        window.addEventListener('DOMContentLoaded', () => {
+            const link = document.getElementById('download-link');
+            
+            // Simula o clique para iniciar o download automático
+            setTimeout(() => {
+                link.click();
+            }, 1000); // 1000 milissegundos = 1 segundo de atraso (opcional, para dar tempo da página carregar)
+        });
+    </script>
+
+</body>
+</html>
